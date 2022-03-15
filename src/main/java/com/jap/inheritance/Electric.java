@@ -4,10 +4,15 @@ public class Electric extends Engines{
     public String currentType;
     public int voltage;
 
-    public Electric(String model, int maxPower, int maxRPM, int maxTorque, int weight, String currentType, int voltage) {
-        super(model, maxPower, maxRPM, maxTorque, weight);
-        this.currentType = currentType;
-        this.voltage = voltage;
+    public Electric(String model) {
+        super.compRatio = -1;
+        super.model = model;
+        super.maxPower = 88;
+        super.maxTorque = 220;
+        super.weight = 45;
+        super.maxRPM = 15000;
+        this.currentType = "AC";
+        this.voltage = 360;
     }
 
     public void showSpecs(String EngineType,String PowerSource){
